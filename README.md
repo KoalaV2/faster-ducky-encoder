@@ -1,1 +1,3 @@
-Hello! Testing 123
+fast-fucking-encoder.
+
+You will have to change the things i have put in <> for example: <directory>
