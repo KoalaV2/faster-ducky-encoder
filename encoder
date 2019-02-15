@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Asks if there are any other storage devices plugged in since if there was the rubber ducky would not be able to get mounted on /dev/sdb1
+echo "Do you have any other storage deviced plugged in expect the rubber ducky?"
+read storage
+if [ $storage == "no" ];then
+	udisksctl mount -b  /dev/sdb1
+	case $? in
+		0) echo "Rubber ducky mounted properly!";;
+		*) echo "Rubber ducky did not monunt properly! :/" && exit;;
+	esac
+	echo 'What is the file you want to encode?'
+	ls /home/koala/hacking/ducky
+	read file
+	java -jar <"directory for duckencoder"> -i <"directory for your folder where you keep you have all your ducky scripts">/$file -o <"usuall usb mounting directory"/inject.bin
+	umount /dev/sdb1
+else
+	echo 'Unplug it and run the script again, or do it manually!'
+fi
