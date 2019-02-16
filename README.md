@@ -1,4 +1,4 @@
-fast-fucking-encoder.
+faster fucking encoder for the stupid ass ducky
 
 Encoder for the rubber ducky to make encoding it a little faster.
 
