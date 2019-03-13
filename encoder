@@ -10,7 +10,7 @@ if [ $storage == "no" ];then
 		*) echo "Rubber ducky did not monunt properly! :/" && exit;;
 	esac
 	echo 'What is the file you want to encode?'
-	ls /home/koala/hacking/ducky
+	ls <"where you have all your scripts">
 	read file
 	java -jar <"directory for duckencoder"> -i <"directory for your folder where you keep you have all your ducky scripts">/$file -o <"usuall usb mounting directory"/inject.bin
 	umount /dev/sdb1
